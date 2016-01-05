@@ -7,6 +7,7 @@ post '/color' do
 
   #Create and return a JSON object with the random cell and color given below.
 
-  cell= rand(1..9)
+  cell= rand(1..9).to_s
   color= "#" + "%06x" % (rand * 0xffffff)
+  [cell, color]
 end
